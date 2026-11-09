@@ -11,10 +11,10 @@ This repository contains the implementation and test cases for an automated **St
 ==================================================
 STUDENT INFORMATION
 ==================================================
-Full Name     : [INSERT STUDENT NAME]
-Student ID    : [INSERT STUDENT ID]
-Course/Major  : [INSERT PROGRAM / MAJOR]
-Current Term  : [INSERT SEMESTER / TERM]
+Full Name     : [ummadisetti bhargav siva sankar]
+Student ID    : [26001358]
+Course/Major  : [CSM-7 , SEMISTER-1]
+Current Term  : [MID1]
 ==================================================
 ```
 
