@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Academic Dashboard</title>
+    <style>
+        /* Base Variables & Reset */
+        :root {
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --border: #e2e8f0;
+            --success: #22c55e;
+            --warning: #f59e0b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar Layout */
+        aside {
+            width: 260px;
+            background-color: white;
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 32px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 12px 16px;
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .nav-links a.active, .nav-links a:hover {
+            background-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        /* Main Content Container */
+        main {
+            flex: 1;
+            padding: 32px;
+            overflow-y: auto;
+        }
+
+        header {
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--gray);
+        }
+
+        /* Dashboard Grid Layout */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+        }
+
+        .left-column, .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* UI Components: Cards */
+        .card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        /* Profile Details Component */
+        .profile-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .info-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 4px;
+        }
+
+        .info-group p {
+            font-weight: 600;
+        }
+
+        /* Progress Bars (Attendance) */
+        .attendance-item {
+            margin-bottom: 16px;
+        }
+
+        .attendance-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+
+        .progress-bar-bg {
+            background-color: var(--border);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        /* Data Tables (Results & Schedules) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            color: var(--gray);
+            font-weight: 600;
+            background-color: var(--light);
+        }
+
+        .grade-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            background-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        /* Announcements List */
+        .announcement-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .announcement-item {
+            border-left: 4px solid var(--primary);
+            padding-left: 12px;
+        }
+
+        .announcement-item h4 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .announcement-item span {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Layout -->
+    <aside>
+        <div class="logo">EduDash</div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li><a href="#">Subjects</a></li>
+            <li><a href="#">Exams</a></li>
+            <li><a href="#">Results</a></li>
+            <li><a href="#">Announcements</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main>
+        <header>
+            <h1>Welcome Back, Alex!</h1>
+            <p class="subtitle">Here is your academic overview for Semester 4.</p>
+        </header>
+
+        <div class="dashboard-grid">
+            
+            <!-- Left Column: Primary Academic Data -->
+            <div class="left-column">
+                
+                <!-- Student Details Card -->
+                <div class="card">
+                    <div class="card-title">Student Details</div>
+                    <div class="profile-info">
+                        <div class="info-group">
+                            <label>Full Name</label>
+                            <p>Alex Morgan</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Student ID</label>
+                            <p>STU2024890</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Course / Major</label>
+                            <p>B.Tech Computer Science</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Current Semester</label>
+                            <p>Semester 4</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Semester Results & Subject Info Table -->
+                <div class="card">
+                    <div class="card-title">Subject Information & Recent Results</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject Code</th>
+                                <th>Subject Title</th>
+                                <th>Credits</th>
+                                <th>Grade Obtained</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CS401</td>
+                                <td>Database Management Systems</td>
+                                <td>4</td>
+                                <td><span class="grade-badge">A+</span></td>
+                            </tr>
+                            <tr>
+                                <td>CS402</td>
+                                <td>Design & Analysis of Algorithms</td>
+                                <td>4</td>
+                                <td><span class="grade-badge">A</span></td>
+                            </tr>
+                            <tr>
+                                <td>CS403</td>
+                                <td>Operating Systems</td>
+                                <td>3</td>
+                                <td><span class="grade-badge">B+</span></td>
+                            </tr>
+                            <tr>
+                                <td>HS401</td>
+                                <td>Organizational Behavior</td>
+                                <td>2</td>
+                                <td><span class="grade-badge">A++</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Examination Schedule Table -->
+                <div class="card">
+                    <div class="card-title">Mid-Term Examination Schedule</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Subject</th>
+                                <th>Time</th>
+                                <th>Room</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nov 16, 2026</td>
+                                <td>Database Management Systems</td>
+                                <td>09:30 AM</td>
+                                <td>Lab 3</td>
+                            </tr>
+                            <tr>
+                                <td>Nov 18, 2026</td>
+                                <td>Design & Analysis of Algorithms</td>
+                                <td>02:00 PM</td>
+                                <td>Hall B</td>
+                            </tr>
+                            <tr>
+                                <td>Nov 20, 2026</td>
+                                <td>Operating Systems</td>

@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC College Website</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #003366;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        /* Banner */
+        header {
+            background-color: #2874a6;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        /* Information Cards */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px #aaa;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#departments">Departments</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Banner Section -->
+    <header id="home">
+        <h1>ABC College of Engineering</h1>
+        <p>Welcome to Our College</p>
+        <p>Quality Education for a Bright Future</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 align="center">About Our College</h2>
+        <p align="center">
+            Our college provides quality education,
+            experienced faculty and excellent facilities.
+        </p>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments">
+        <h2 align="center">Our Departments</h2>
+
+        <div class="container">
+            <div class="card">
+                <h3>Computer Science</h3>
+                <p>Learn programming and technology.</p>
+            </div>
+
+            <div class="card">
+                <h3>Electronics</h3>
+                <p>Study electronic systems and circuits.</p>
+            </div>
+
+            <div class="card">
+                <h3>Mechanical</h3>
+                <p>Learn machines and engineering.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses">
+        <h2 align="center">Courses Offered</h2>
+        <div class="container">
+            <div class="card">
+                <h3>B.Tech</h3>
+                <p>4 Years Undergraduate Course</p>
+            </div>
+
+            <div class="card">
+                <h3>M.Tech</h3>
+                <p>2 Years Postgraduate Course</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty">
+        <h2 align="center">Faculty Profiles</h2>
+        <div class="container">
+            <div class="card">
+                <h3>Dr. Ravi Kumar</h3>
+                <p>Professor - Computer Science</p>
+            </div>
+
+            <div class="card">
+                <h3>Mrs. Priya</h3>
+                <p>Assistant Professor - Electronics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions">
+        <h2 align="center">Admissions</h2>
+        <p align="center">
+            Admissions are open for the academic year.
+            Contact the college office for application details.
+        </p>
+    </section>
+
+    <!-- Campus Facilities -->
+    <section id="facilities">
+        <h2 align="center">Campus Facilities</h2>
+        <div class="container">
+            <div class="card">
+                <h3>Library</h3>
+                <p>Books and digital resources.</p>
+            </div>
+
+            <div class="card">
+                <h3>Laboratories</h3>
+                <p>Modern practical learning facilities.</p>
+            </div>
+
+            <div class="card">
+                <h3>Sports</h3>
+                <p>Indoor and outdoor sports facilities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+        <h2 align="center">College Events</h2>
+        <p align="center">
+            Annual Day, Technical Fest and Sports Day.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 align="center">Contact Us</h2>
+        <p align="center">
+            Email: info@abccollege.com<br>
+            Phone: 9876543210<br>
+            Address: Vijayawada, Andhra Pradesh
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ABC College. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

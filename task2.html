@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Learning Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #243b64;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #162947;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            width: 280px;
+            border-radius: 8px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+        }
+
+        button {
+            background: #243b64;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        progress {
+            width: 100%;
+        }
+
+        footer {
+            background: #162947;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .courses {
+                flex-direction: column;
+            }
+
+            .card {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Learn Online</h1>
+    <p>Learn New Skills Anytime, Anywhere</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Instructors</a>
+    <a href="#">My Learning</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <h2>Course Categories</h2>
+    <p>Web Development | Programming | Design | Marketing</p>
+
+    <h2>Popular Courses</h2>
+
+    <div class="courses">
+
+        <div class="card">
+            <img src="html.jpg" alt="HTML Course">
+            <h3>HTML & CSS</h3>
+            <p>Instructor: John Smith</p>
+            <p>Learn to create responsive websites.</p>
+
+            <h4>Learning Objectives</h4>
+            <ul>
+                <li>HTML Basics</li>
+                <li>CSS Styling</li>
+                <li>Responsive Design</li>
+            </ul>
+
+            <button>Enroll Now</button>
+        </div>
+
+        <div class="card">
+            <img src="python.jpg" alt="Python Course">
+            <h3>Python Programming</h3>
+            <p>Instructor: David</p>
+            <p>Learn Python programming from basics.</p>
+
+            <h4>Learning Objectives</h4>
+            <ul>
+                <li>Variables</li>
+                <li>Loops</li>
+                <li>Functions</li>
+            </ul>
+
+            <button>Enroll Now</button>
+        </div>
+
+        <div class="card">
+            <img src="javascript.jpg" alt="JavaScript Course">
+            <h3>JavaScript</h3>
+            <p>Instructor: Sarah</p>
+            <p>Learn interactive web development.</p>
+
+            <h4>Learning Objectives</h4>
+            <ul>
+                <li>JavaScript Basics</li>
+                <li>DOM Manipulation</li>
+                <li>Events</li>
+            </ul>
+
+            <button>Enroll Now</button>
+        </div>
+
+    </div>
+
+    <h2>Video Lessons</h2>
+    <p>Watch video lessons and improve your skills.</p>
+    <video width="300" controls>
+        <source src="lesson.mp4" type="video/mp4">
+    </video>
+
+    <h2>My Learning Progress</h2>
+    <p>HTML Course - 70% Completed</p>
+    <progress value="70" max="100"></progress>
+
+    <p>Python Course - 40% Completed</p>
+    <progress value="40" max="100"></progress>
+
+    <h2>Instructor Profiles</h2>
+    <p>John Smith - Web Development Expert</p>
+    <p>David - Python Programming Expert</p>
+    <p>Sarah - JavaScript Expert</p>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Learn Online. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
